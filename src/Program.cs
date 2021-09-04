@@ -1,21 +1,15 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
+using Conesoft.Hosting;
 
-namespace Davepermen.Website
+var builder = WebApplication.CreateBuilder(args);
+builder.Configuration.AddHostConfiguration();
+builder.Services.AddRazorPages();
+
+var app = builder.Build();
+app.UseRouting();
+app.UseHostingDefaults(useDefaultFiles: true, useStaticFiles: true);
+app.UseEndpoints(endpoints =>
 {
-    using Conesoft.Hosting;
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
+    endpoints.MapRazorPages();
+});
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateHostBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
-}
+app.Run();
