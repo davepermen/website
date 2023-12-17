@@ -18,19 +18,26 @@
     <title>Davepermen</title>
     <meta name="description" content="Homepage of Davepermen">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="davepermen.net">
-    <meta property="og:description" content="Homepage of Davepermen">
-    <meta property="og:image" content="/preview.jpg?v=ngj4y2rGxlX">
+    <meta property="og:title" content="Homepage of Davepermen">
+    <meta property="og:description" content="Personal Website of Davepermen, with Contact Information">
+    <meta property="og:image" content="https://davepermen.net/preview.jpg?v=ngj4y2rGxl">
+
+    <meta name="twitter:title" content="Homepage of Davepermen">
+    <meta name="twitter:description" content="Personal Website of Davepermen, with Contact Information">
+    <meta name="twitter:image" content="https://davepermen.net/preview.jpg?v=ngj4y2rGxl">
+    <meta name="twitter:card" content="summary_large_image">
 
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="/style.min.css" asp-append-version="true" type="text/css">
+    <link rel="stylesheet" href="/style.css" asp-append-version="true" type="text/css">
+
+    <link rel="preload" href="/Contact%20of%20davepermen.svg" as="image" />
 </head>
 <body>
     <h1>davepermen.net</h1>
 
     <main>
         <section>
-            <h1>me</h1>
+            <header>me</header>
             <span>my name is David Spörri</span>
             <span>I'm living in Switzerland</span>
             <span>you can find me on <a rel='me' href='https://twitter.com/davepermen' target="_blank">twitter</a></span>
@@ -38,15 +45,29 @@
             <span>I'm available on <a rel='me' href='https://bsky.app/profile/davepermen.net'>bluesky</a> as well</span>
             <span>or drop me a mail at <a href='mailto:&#100;&#097;&#118;&#101;&#112;&#101;&#114;&#109;&#101;&#110;&#064;&#104;&#111;&#116;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;'>&#100;&#097;&#118;&#101;&#112;&#101;&#114;&#109;&#101;&#110;&#064;&#104;&#111;&#116;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a></span>
             <span>you can even reach me on <a href='tel:&#048;&#048;&#052;&#049;&#055;&#057;&#055;&#055;&#051;&#050;&#049;&#048;&#049;'>+&#052;&#049;&#032;(&#048;)&#055;&#057;&#032;&#055;&#055;&#051;&#032;&#050;&#049;&#032;&#048;&#049;</a></span>
+            <br />
+            <span>scan or save full <button popovertarget="contact of davepermen">contact info</button></span>
+
+            <div popover id="contact of davepermen">
+                <section>
+                    <header>qr code to scan</header>
+                    <img title="qr code of contact of davepermen" src="/Contact%20of%20davepermen.svg">
+                </section>
+
+                <section>
+                    <header>or vcard to download</header>
+                    <a href="/Contact%20of%20davepermen.vcf">contact of davepermen.vcf</a>
+                </section>
+            </div>
         </section>
         <section>
-            <h1>music</h1>
+            <header>music</header>
             <span>I'm on <a rel='me' href='https://soundcloud.com/davepermen' target="_blank">soundcloud</a></span>
             <span>and on <a rel='me' href='https://www.mixcloud.com/davepermen' target="_blank">mixcloud</a></span>
             <span>you can even find me on <a rel='me' href='https://davepermen.bandcamp.com' target="_blank">bandcamp</a></span>
         </section>
         <section>
-            <h1>code</h1>
+            <header>code</header>
             <span>I'm on <a rel='me' href='http://github.com/davepermen' target="_blank">github</a></span>
         </section>
     </main>

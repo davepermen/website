@@ -24,7 +24,11 @@ html {
     line-height: 1em;
 }
 
-script, head, style {
+img {
+    max-width: 100%;
+}
+
+script, head, style, [popover]:not(:popover-open) {
     display: none;
 }
 
@@ -68,8 +72,8 @@ main {
     grid-gap: 1rem;
 }
 
-    main h1 {
-        font-size: inherit;
+    main header {
+        font-weight: 500;
     }
 
 footer {
@@ -77,10 +81,13 @@ footer {
     justify-self: stretch;
     font-size: 0.7rem;
     opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    overflow-y: clip;
 }
 
     footer span {
-        justify-self: end;
+        text-align: end;
         padding-inline-end: 0.25em;
     }
 
@@ -91,10 +98,51 @@ footer {
     footer > a, footer > a * {
         justify-self: stretch;
         height: 1rem;
+        width: 100%;
     }
 
-a, a * {
-    color: inherit;
+a, a *, button {
+    all: inherit;
+    display: initial;
+    text-decoration: underline;
     transition: text-shadow 0.25s ease-in-out;
     cursor: pointer;
 }
+
+div[popover] {
+    text-align: center;
+    color: white;
+    border: none;
+    background: black;
+    box-shadow: 0 0 1rem black, 0 0 1rem black;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    width: 100%;
+    max-width: 500px;
+}
+
+    div[popover] header {
+        margin-block-start: 1rem;
+    }
+
+    div[popover] :not(header) {
+        margin-block: 0.5rem;
+    }
+
+    div[popover] img {
+        aspect-ratio: 1;
+    }
+
+
+div[popover] {
+    opacity: 0;
+    transition: opacity 0.5s, display 0.5s;
+}
+
+    div[popover]:popover-open {
+        @starting-style {
+            opacity: 0;
+        }
+        opacity: 1;
+    }
