@@ -1,19 +1,19 @@
 ﻿@page
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
+@inject Conesoft.Hosting.ApplicationBuildHash abh;
+
 <!DOCTYPE html>
 <html lang="en">
 <head prefix="og: http://ogp.me/ns#">
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <base href="/" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" asp-append-version="true">
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" asp-append-version="true">
-    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" asp-append-version="true">
-    <link rel="manifest" href="/icons/site.webmanifest" asp-append-version="true">
-    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" asp-append-version="true" color="#7c8e93">
-    <link rel="shortcut icon" href="/icons/favicon.ico" asp-append-version="true">
-    <meta name="apple-mobile-web-app-title" content="Davepermen">
-    <meta name="application-name" content="Davepermen">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon.png" />
+    <link rel="manifest" href="/pwa/site.webmanifest" />
+    <link rel="shortcut icon" href="/icons/favicon.ico" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
     <title>Davepermen</title>
     <meta name="description" content="Homepage of Davepermen">
@@ -27,7 +27,6 @@
     <meta name="twitter:image" content="https://davepermen.net/preview.jpg?v=ngj4y2rGxl">
     <meta name="twitter:card" content="summary_large_image">
 
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/style.css" asp-append-version="true" type="text/css">
 
     <link rel="preload" href="/Contact%20of%20davepermen.svg" as="image" />
@@ -75,7 +74,7 @@
     <footer>
         <span>want to donate? <a rel='me' href='https://www.paypal.me/davepermen' target="_blank">click here</a></span>
         <span>&copy; David Spörri @DateTime.Today.Year</span>
-        <span>.net @Environment.Version.Major</span>
+        <span>.net @Environment.Version.Major compiled with hash @abh.CompiledHash</span>
         <a href="https://www.republik.ch/2019/04/08/die-schoenste-klimagrafik-der-welt" target="_blank">
             <img src="/die-schoenste-klimagrafik-der-welt.svg" asp-append-version="true" alt="Wärmestreifen Schweiz" />
         </a>

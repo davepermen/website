@@ -1,0 +1,16 @@
+{
+  "name": "Davepermen",
+  "short_name": "Davepermen",
+  "icons": [
+    {
+      "src": "/icons/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "start_url": "/",
+  "display": "standalone",
+  "display_override": [ "window-controls-overlay" ]
+}

@@ -13,6 +13,7 @@ html {
     background-attachment: fixed;
     font-size: calc(min(4.8vw,3.5vh));
     overflow-x: clip;
+    app-region: drag;
 }
 
 * {
@@ -23,6 +24,10 @@ html {
     margin: 0;
     line-height: 1em;
 }
+
+    *:not(:has(*)) {
+        app-region: no-drag !important;
+    }
 
 img {
     max-width: 100%;
@@ -144,5 +149,6 @@ div[popover] {
         @starting-style {
             opacity: 0;
         }
+
         opacity: 1;
     }
