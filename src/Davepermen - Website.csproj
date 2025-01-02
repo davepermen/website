@@ -11,7 +11,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Conesoft.Hosting" Version="3.3.4" />
+	  <PackageReference Include="Conesoft.Hosting" Version="3.3.6" />
 	</ItemGroup>
 
 </Project>

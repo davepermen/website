@@ -3,7 +3,7 @@ using Conesoft.Hosting;
 var builder = WebApplication.CreateBuilder(args);
 
 builder
-    .AddHostConfigurationFiles(legacyMode: false)
+    .AddHostConfigurationFiles()
     .AddUsersWithStorage()
     .AddHostEnvironmentInfo()
     .AddLoggingService()
