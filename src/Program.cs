@@ -1,4 +1,5 @@
 using Conesoft.Hosting;
+using Conesoft.PwaGenerator;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,7 @@ app
         DefaultContentType = "application/jrd+json; charset=utf-8",
     });
 
+app.MapPwaInformationFromAppSettings();
 app.MapRazorPages();
 
 app.Run();

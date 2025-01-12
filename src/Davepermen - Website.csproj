@@ -12,6 +12,7 @@
 
 	<ItemGroup>
 	  <PackageReference Include="Conesoft.Hosting" Version="3.3.6" />
+	  <PackageReference Include="Conesoft.PwaGenerator" Version="1.0.1" />
 	</ItemGroup>
 
 </Project>
