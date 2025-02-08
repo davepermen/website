@@ -1,0 +1,156 @@
+﻿@page
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+        html {
+            color-scheme: dark light;
+            font-family: sans-serif;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            padding-inline: 0;
+            margin-inline: 0;
+        }
+
+        article {
+            background: light-dark(#DDD, #333);
+            max-width: 40rem;
+            margin-inline: auto;
+            margin-block: 4rem;
+        }
+
+            article > header {
+                font-size: 2rem;
+                text-align: center;
+                padding-block: 1rem;
+            }
+
+            article > footer {
+                text-align: end;
+                padding: 0.5rem;
+                padding-inline: 1rem;
+            }
+
+        ul {
+            padding-left: 0;
+        }
+
+        img {
+            object-fit: cover;
+            object-position: center var(--pos);
+            max-width: 100%;
+            aspect-ratio: 16/9;
+            place-self: stretch;
+        }
+
+        li {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: 1fr auto 1fr;
+            gap: 1rem 1rem;
+        }
+
+            li img {
+                grid-row: 1 / -1;
+                grid-column: 1;
+            }
+
+            li header,
+            li time,
+            li var {
+                grid-column: 2;
+            }
+
+            li header {
+                font-size: 1.25rem;
+                font-weight: 900;
+                place-self: end start;
+            }
+
+            li time {
+                place-self: center start;
+            }
+
+            li var {
+                place-self: start start;
+            }
+
+
+            li:not(:has(*)) {
+                font-size: 1.25rem;
+                font-weight: 100;
+            }
+
+        footer {
+            font-weight: 900;
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 0 1rem;
+            align-items: end;
+        }
+
+        var, output {
+            font-size: 1.125rem;
+            font-weight: 900;
+            font-style: normal;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <header>EV Mileage</header>
+        <ul>
+            <li>
+                <header>Renault ZOE</header>
+                <img style='--pos: 100%' src='https://pbs.twimg.com/media/GW-VikZXAAAw3Nq?format=jpg&name=large'>
+                <time>2014 - 2019</time>
+                <var>118044km</var>
+            </li>
+
+            <li>
+                <header>Tesla Model 3 SR+</header>
+                <img style='--pos: 100%' src='https://pbs.twimg.com/media/GW-UIiYWwAA3Mz-?format=jpg&name=4096x4096'>
+                <time>2019 - 2024</time>
+                <var>142128km</var>
+            </li>
+
+            <li>
+                <header>Polestar Rental</header>
+                <img style='--pos: 45%' src='https://i.imgur.com/FbsGcLn.jpeg'>
+                <time>November 2023</time>
+                <var>500km</var>
+            </li>
+
+            <li>
+                <header>Tesla Model 3 Long Range Rental</header>
+                <img style='--pos: 55%' src='https://pbs.twimg.com/media/GPkSl2BWkAAg3xl?format=jpg&name=large'>
+                <time>June 2024</time>
+                <var>4500km</var>
+            </li>
+
+            <li>
+                <header>Tesla Model 3 Performance</header>
+                <img style='--pos: 85%' src='https://pbs.twimg.com/media/GW-WPPYXUAAi90p?format=jpg&name=900x900'>
+                <time>2024 ongoing</time>
+                <var>10000km</var>
+            </li>
+        </ul>
+
+        <footer>
+            Total <output>275172km</output>
+        </footer>
+    </article>
+</body>
+</html>
