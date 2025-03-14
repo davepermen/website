@@ -4,7 +4,7 @@ VERSION:3.0
 N;CHARSET=utf-8:Spörri;David;;;
 FN;CHARSET=utf-8:David Spörri
 NICKNAME:davepermen
-EMAIL;type=home:davepermen@hotmail.com
+EMAIL;type=home:davepermen@pm.me
 BDAY:19840117
 GENDER:M
 ORG:Conesoft
@@ -12,7 +12,5 @@ TEL:+41797732101
 ADR:;Plattenstrasse 5;;Burg AG;AG;5736;Schweiz
 URL;type=home:https://davepermen.net
 URL;type=work:https://conesoft.net
-URL:https://twitter.com/davepermen
-URL:https://mastodon.social/@davepermen
 URL:https://bsky.app/profile/davepermen.net
 END:VCARD
